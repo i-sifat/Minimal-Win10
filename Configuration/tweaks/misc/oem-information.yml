@@ -1,0 +1,35 @@
+---
+title: Configure OEM Information
+description: Configures OEM information to contain the iSiFAT version and the iSiFAT Discord server
+privilege: TrustedInstaller
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+    value: 'EditionSubManufacturer'
+    data: 'iSiFAT'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+    value: 'EditionSubstring'
+    data: 'iSiFAT OS'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+    value: 'EditionSubVersion'
+    data: 'iSiFAT OS'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation'
+    value: 'Manufacturer'
+    data: 'iSiFAT'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation'
+    value: 'Model'
+    data: 'iSiFAT OS'
+    type: REG_SZ
+  - !registryValue: 
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation'
+    value: 'SupportURL'
+    data: ''
+    type: REG_SZ
